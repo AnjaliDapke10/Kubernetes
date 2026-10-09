@@ -1,10 +1,11 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  -name: nginxApp
+  name: nginxapp
+  namespace: mywork
 spec:
-  container: 
+  containers:
     - name: nginx
       image: nginx
       ports:
-        - 80
+        - containerPort: 80

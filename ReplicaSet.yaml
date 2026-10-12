@@ -8,7 +8,7 @@ spec:
     matchlables: 
       app: frontend
     matchexpressions:
-      - { key: environment, operator: NotIn, values: [dev] }
+      - { key: env, operator: In, values: [dev] }
   template:
     metadata:
       labels:

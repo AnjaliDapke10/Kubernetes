@@ -1,9 +1,11 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: deployment-set
+  name: deployment-set-recreate
 spec: 
   replicas: 3
+  strategy:
+    type: Recreate
   selector:
     matchLabels:
       app: frontend

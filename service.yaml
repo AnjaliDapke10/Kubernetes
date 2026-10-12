@@ -6,7 +6,7 @@ metadata:
 spec:
   type: NodePort
   selector: 
-    name: nginxApp
+    app: nginxapp
   ports:
     - protocol: TCP
       port: 80

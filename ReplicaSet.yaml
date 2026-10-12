@@ -1,0 +1,22 @@
+apiVersion: apps/v1       
+kind: ReplicaSet
+metadata:
+  name: frontend-rs
+spec:
+  replicas: 3
+  selector:
+    matchlables: 
+      app: frontend
+    matchexpressions:
+      - { key: environment, operator: NotIn, values: [dev] }
+  template:
+    metadata:
+      labels:
+        app: frontend
+        env: dev
+      spec:
+        containers:
+          - name: nginx
+            image: nginx:latest
+            ports:
+              - containerPort: 80

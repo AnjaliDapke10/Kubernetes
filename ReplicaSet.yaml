@@ -16,7 +16,7 @@ spec:
         env: dev
     spec:
       containers:
-          - name: nginx
+          - name: httpd
             image: nginx:latest
             ports:
               - containerPort: 80

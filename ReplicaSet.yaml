@@ -5,7 +5,7 @@ metadata:
 spec:
   replicas: 3
   selector:
-    matchLables: 
+    matchLabels: 
       app: frontend
     matchExpressions:
       - { key: env, operator: In, values: [dev] }
@@ -16,7 +16,7 @@ spec:
         env: dev
     spec:
       containers:
-        - name: nginx
-          image: nginx:latest
-          ports:
-            - containerPort: 80
+          - name: nginx
+            image: nginx:latest
+            ports:
+              - containerPort: 80

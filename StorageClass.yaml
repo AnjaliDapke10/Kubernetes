@@ -10,4 +10,4 @@ parameters:                      #Storage-specific settings.
 
 reclaimPolicy: Delete             #Determines what happens when PVC is deleted.
 allowVolumeExpansion: true        #Allows increasing disk size later.
-volumeBindingMode: Immediate   #Controls when the volume gets created.
+volumeBindingMode: Immediate      #Controls when the volume gets created.

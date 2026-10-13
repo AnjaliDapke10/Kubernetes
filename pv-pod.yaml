@@ -24,5 +24,5 @@ spec:
       mountPath: /usr/local/apache2/htdocs/
   volumes:
     - name: my-storage
-      persistentVolumeReclaim:
+      persistentVolumeClaim:
         claimName: my-pvc

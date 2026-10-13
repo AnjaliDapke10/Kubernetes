@@ -1,8 +1,7 @@
 apiVersion: apps/v1
-kind: CongigMap
+kind: ConfigMap
 metadata: 
   name: app-config
 data: 
   DEPARTMENT: devops
   ENV: dev
-  

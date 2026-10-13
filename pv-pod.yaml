@@ -21,8 +21,8 @@ spec:
       name:  http
     volumeMounts:
     - name: my-storage
-      mountPath: /mnt/Data
+      mountPath: /usr/local/apache2/htdocs/
   volumes:
     - name: my-storage
-      hostPath:
-        path: /usr/local/apache2/htdocs/
+      persistentVolumeReclaim:
+        claimName: my-pvc

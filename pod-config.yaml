@@ -20,12 +20,12 @@ spec:
           env:
             - name: DEPARTMENT
               valueFrom:
-                configMapRef:
+                configMapKeyRef:
                   name: app-config
                   key: DEPARTMENT
             - name: ENV
               valueFrom:
-                configMapRef:
+                configMapKeyRef:
                   name: app-config
                   key: ENV
 

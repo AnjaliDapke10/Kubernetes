@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pv-pod
+spec:
+  containers:
+  - name: my-pv-pod
+    image: httpd
+    resources:
+      limits:
+        cpu: 200m
+        memory: 500Mi
+      requests:
+        cpu: 100m
+        memory: 200Mi
+    env:
+    - name: name
+      value: Anjali
+    ports:
+    - containerPort:  80
+      name:  http
+    volumeMounts:
+    - name: my-storage
+      mountPath: /etc/Data
+  volumes:
+    - name: my-storage
+      hostPath:
+        path: /usr/local/apache2/htdocs/

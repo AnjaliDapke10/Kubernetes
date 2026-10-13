@@ -1,0 +1,8 @@
+apiVersion: apps/v1
+kind: CongigMap
+metadata: 
+  name: app-config
+data: 
+  DEPARTMENT: devops
+  ENV: dev
+  

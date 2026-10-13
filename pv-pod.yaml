@@ -21,7 +21,7 @@ spec:
       name:  http
     volumeMounts:
     - name: my-storage
-      mountPath: /etc/Data
+      mountPath: /mnt/Data
   volumes:
     - name: my-storage
       hostPath:

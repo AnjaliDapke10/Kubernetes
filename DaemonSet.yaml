@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: DaemonSet
 metadata:
-  name: MYAPP
+  name: myapp
   namespace: default
   labels:
-    app: MYAPP
+    app: myapp
 spec:
   selector:
     matchLabels:
-      app: MYAPP
+      app: myapp
   template:
     metadata:
       labels:
-        app: MYAPP
+        app: myapp
     spec:
       containers:
-      - name: MYAPP
+      - name: myapp
         image: apache2
         resources:
           limits:

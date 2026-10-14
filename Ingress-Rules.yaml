@@ -9,7 +9,7 @@ spec:
   - host: amazon.com
     http:
       paths:
-      - path: /
+      - path: "/"
         pathType: Prefix
         backend:
           service:
@@ -20,7 +20,7 @@ spec:
   - host: mobile.com
     http:
       paths:
-      - path: /
+      - path: "/"
         pathType: Prefix
         backend:
           service:

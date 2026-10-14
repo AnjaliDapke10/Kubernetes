@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name:  amazon-home
+spec:
+  selector:
+    matchLabels:
+      app: amazon-home
+  template:
+    metadata:
+      labels:
+        app:  amazon-home
+    spec:
+      containers:
+      - name:  amazon-home
+        image:  httpd
+        env:
+        - name: home-page
+          value: amazon.com
+        ports:
+        - containerPort:  80
+          
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name:  amazon-mobile
+spec:
+  selector:
+    matchLabels:
+      app: amazon-mobile
+  template:
+    metadata:
+      labels:
+        app:  amazon-mobile
+    spec:
+      containers:
+      - name:  amazon-home
+        image:  httpd
+        env:
+        - name: mobile-page
+          value: amazon.com/mobile
+        ports:
+        - containerPort:  80
+          

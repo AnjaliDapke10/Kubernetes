@@ -21,7 +21,7 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: amazon-home-svc
+            name: amazon-mobile-svc
             port:
               number: 80
 

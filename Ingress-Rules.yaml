@@ -17,13 +17,21 @@ spec:
             port:
               number: 80
 
-  - host: mobile.com
-    http:
-      paths:
-      - path: "/"
+      - path: "/mobile"
         pathType: Prefix
         backend:
           service:
-            name: amazon-mobile-svc
+            name: amazon-home-svc
             port:
               number: 80
+
+#  - host: mobile.com
+#    http:
+#      paths:
+#      - path: "/"
+#        pathType: Prefix
+#        backend:
+#          service:
+#            name: amazon-mobile-svc
+#            port:
+#              number: 80

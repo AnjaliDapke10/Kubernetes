@@ -1,4 +1,4 @@
-apiVersion: authorization.k8s.io/v1
+apiVersion: rbac.authorization.k8s.io/v1
 kind: Role 
 metadata:
   name: access-role
@@ -6,4 +6,4 @@ rules:
   - apiGroup: [""]
     resources: ["pods"]
     verbs: ["get","watch","create","list"]
-     
+

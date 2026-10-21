@@ -3,7 +3,7 @@ kind: Role
 metadata:
   name: access-role
 rules:
-  - apiGroup: [""]
+  - apiGroups: [""]
     resources: ["pods"]
     verbs: ["get","watch","create","list"]
 

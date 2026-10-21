@@ -2,11 +2,13 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
   name: mybinding
+
 subjects:
-  - kind : User
-    name: Anjali
-    apiGroup: rbac.authorization.k8s.io
+- kind: User
+  name: Anjali
+  apiGroup: rbac.authorization.k8s.io
+
 roleRef:
-  kind: Role 
+  kind: Role
   name: access-role
-  apiGroup: rbac.authorization.k8s.io 
+  apiGroup: rbac.authorization.k8s.io
